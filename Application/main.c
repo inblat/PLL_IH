@@ -1,7 +1,7 @@
 /*
  * main.c
  *
- *  Created on: 12 δεκ. 2018 γ.
+ *  Created on: 12 Γ€Γ₯Γͺ. 2018 Γ£.
  *      Author: admin
  */
 
@@ -22,13 +22,13 @@ volatile int32_t delayCCR1;
 
 static volatile uint16_t hTimebase_500us = 0;
 
-volatile struct GLOBAL_FLAGS {
-  //! True when PID control loop should run one time
+volatile struct GLOBAL_FLAGS 
+{
   uint8_t pidTimer:1;
   uint8_t startTimer:1;
   uint8_t clearCC1IF:1;
   uint8_t clearCC2IF:1;
-  uint8_t dummy:7;
+  uint8_t dummy:4;
 } gFlags = {0, 0, 0, 0, 0};
 
 
